@@ -1,0 +1,54 @@
+<!-- Validation failure messages -->
+<% if @marketterm.errors.any? %>
+  <% @marketterm.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Marketing Term</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_marketterm" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for flavor_id -->
+      <div class="form-group">
+        <label for="flavor_id" class="control-label">
+          Flavor
+        </label>
+
+        <input type="text" id="flavor_id" name="flavor_id" placeholder="Flavor" class="form-control" value="<%= @marketterm.flavor_id %>">
+      </div>
+
+      <!-- Label and input for product_id -->
+      <div class="form-group">
+        <label for="product_id" class="control-label">
+          Product
+        </label>
+
+        <input type="text" id="product_id" name="product_id" placeholder="Product" class="form-control" value="<%= @marketterm.product_id %>">
+      </div>
+
+<!-- Label and input for name -->
+      <div class="form-group">
+        <label for="name" class="control-label">
+          Name
+        </label>
+        <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @marketterm.name %>">
+      </div>
+
+      <button class="btn btn-success">
+        Create Marketing Term
+      </button>
+      or
+      <a href="/marketterms">Cancel</a>
+    </form>
+  </div>
+</div>
