@@ -1,39 +1,42 @@
 Rails.application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   root 'products#index'
 
   # Routes for the Marketterm resource:
   # CREATE
-  get "/marketterms/new", :controller => "marketterms", :action => "new"
-  post "/create_marketterm", :controller => "marketterms", :action => "create"
+  # get "/marketterms/new", :controller => "marketterms", :action => "new"
+  # post "/create_marketterm", :controller => "marketterms", :action => "create"
 
   # READ
-  get "/marketterms", :controller => "marketterms", :action => "index"
-  get "/marketterms/:id", :controller => "marketterms", :action => "show"
+  # get "/marketterms", :controller => "marketterms", :action => "index"
+  # get "/marketterms/:id", :controller => "marketterms", :action => "show"
 
   # UPDATE
-  get "/marketterms/:id/edit", :controller => "marketterms", :action => "edit"
-  post "/update_marketterm/:id", :controller => "marketterms", :action => "update"
+  # get "/marketterms/:id/edit", :controller => "marketterms", :action => "edit"
+  # post "/update_marketterm/:id", :controller => "marketterms", :action => "update"
 
   # DELETE
-  get "/delete_marketterm/:id", :controller => "marketterms", :action => "destroy"
+  # get "/delete_marketterm/:id", :controller => "marketterms", :action => "destroy"
   #------------------------------
 
   # Routes for the Delivery resource:
   # CREATE
-  get "/deliveries/new", :controller => "deliveries", :action => "new"
-  post "/create_delivery", :controller => "deliveries", :action => "create"
+  # get "/deliveries/new", :controller => "deliveries", :action => "new"
+  # post "/create_delivery", :controller => "deliveries", :action => "create"
 
   # READ
   get "/deliveries", :controller => "deliveries", :action => "index"
   get "/deliveries/:id", :controller => "deliveries", :action => "show"
 
   # UPDATE
-  get "/deliveries/:id/edit", :controller => "deliveries", :action => "edit"
-  post "/update_delivery/:id", :controller => "deliveries", :action => "update"
+  # get "/deliveries/:id/edit", :controller => "deliveries", :action => "edit"
+  # post "/update_delivery/:id", :controller => "deliveries", :action => "update"
 
   # DELETE
-  get "/delete_delivery/:id", :controller => "deliveries", :action => "destroy"
+  # get "/delete_delivery/:id", :controller => "deliveries", :action => "destroy"
   #------------------------------
 
   # Routes for the Favorite resource:
@@ -55,87 +58,87 @@ Rails.application.routes.draw do
 
   # Routes for the Allergeninfo resource:
   # CREATE
-  get "/allergeninfos/new", :controller => "allergeninfos", :action => "new"
-  post "/create_allergeninfo", :controller => "allergeninfos", :action => "create"
+  # get "/allergeninfos/new", :controller => "allergeninfos", :action => "new"
+  # post "/create_allergeninfo", :controller => "allergeninfos", :action => "create"
 
   # READ
-  get "/allergeninfos", :controller => "allergeninfos", :action => "index"
-  get "/allergeninfos/:id", :controller => "allergeninfos", :action => "show"
+  # get "/allergeninfos", :controller => "allergeninfos", :action => "index"
+  # get "/allergeninfos/:id", :controller => "allergeninfos", :action => "show"
 
   # UPDATE
-  get "/allergeninfos/:id/edit", :controller => "allergeninfos", :action => "edit"
-  post "/update_allergeninfo/:id", :controller => "allergeninfos", :action => "update"
+  # get "/allergeninfos/:id/edit", :controller => "allergeninfos", :action => "edit"
+  # post "/update_allergeninfo/:id", :controller => "allergeninfos", :action => "update"
 
   # DELETE
-  get "/delete_allergeninfo/:id", :controller => "allergeninfos", :action => "destroy"
+  # get "/delete_allergeninfo/:id", :controller => "allergeninfos", :action => "destroy"
   #------------------------------
 
   # Routes for the Allergen resource:
   # CREATE
-  get "/allergens/new", :controller => "allergens", :action => "new"
-  post "/create_allergen", :controller => "allergens", :action => "create"
+  # get "/allergens/new", :controller => "allergens", :action => "new"
+  # post "/create_allergen", :controller => "allergens", :action => "create"
 
   # READ
   get "/allergens", :controller => "allergens", :action => "index"
   get "/allergens/:id", :controller => "allergens", :action => "show"
 
   # UPDATE
-  get "/allergens/:id/edit", :controller => "allergens", :action => "edit"
-  post "/update_allergen/:id", :controller => "allergens", :action => "update"
+  # get "/allergens/:id/edit", :controller => "allergens", :action => "edit"
+  # post "/update_allergen/:id", :controller => "allergens", :action => "update"
 
   # DELETE
-  get "/delete_allergen/:id", :controller => "allergens", :action => "destroy"
+  # get "/delete_allergen/:id", :controller => "allergens", :action => "destroy"
   #------------------------------
 
   # Routes for the Brand resource:
   # CREATE
-  get "/brands/new", :controller => "brands", :action => "new"
-  post "/create_brand", :controller => "brands", :action => "create"
+  # get "/brands/new", :controller => "brands", :action => "new"
+  # post "/create_brand", :controller => "brands", :action => "create"
 
   # READ
   get "/brands", :controller => "brands", :action => "index"
   get "/brands/:id", :controller => "brands", :action => "show"
 
   # UPDATE
-  get "/brands/:id/edit", :controller => "brands", :action => "edit"
-  post "/update_brand/:id", :controller => "brands", :action => "update"
+  # get "/brands/:id/edit", :controller => "brands", :action => "edit"
+  # post "/update_brand/:id", :controller => "brands", :action => "update"
 
   # DELETE
-  get "/delete_brand/:id", :controller => "brands", :action => "destroy"
+  # get "/delete_brand/:id", :controller => "brands", :action => "destroy"
   #------------------------------
 
   # Routes for the Flavor resource:
   # CREATE
-  get "/flavors/new", :controller => "flavors", :action => "new"
-  post "/create_flavor", :controller => "flavors", :action => "create"
+  # get "/flavors/new", :controller => "flavors", :action => "new"
+  # post "/create_flavor", :controller => "flavors", :action => "create"
 
   # READ
   get "/flavors", :controller => "flavors", :action => "index"
   get "/flavors/:id", :controller => "flavors", :action => "show"
 
   # UPDATE
-  get "/flavors/:id/edit", :controller => "flavors", :action => "edit"
-  post "/update_flavor/:id", :controller => "flavors", :action => "update"
+  # get "/flavors/:id/edit", :controller => "flavors", :action => "edit"
+  # post "/update_flavor/:id", :controller => "flavors", :action => "update"
 
   # DELETE
-  get "/delete_flavor/:id", :controller => "flavors", :action => "destroy"
+  # get "/delete_flavor/:id", :controller => "flavors", :action => "destroy"
   #------------------------------
 
   # Routes for the Product resource:
   # CREATE
-  get "/products/new", :controller => "products", :action => "new"
-  post "/create_product", :controller => "products", :action => "create"
+  # get "/products/new", :controller => "products", :action => "new"
+  # post "/create_product", :controller => "products", :action => "create"
 
   # READ
   get "/products", :controller => "products", :action => "index"
   get "/products/:id", :controller => "products", :action => "show"
 
   # UPDATE
-  get "/products/:id/edit", :controller => "products", :action => "edit"
-  post "/update_product/:id", :controller => "products", :action => "update"
+  # get "/products/:id/edit", :controller => "products", :action => "edit"
+  # post "/update_product/:id", :controller => "products", :action => "update"
 
   # DELETE
-  get "/delete_product/:id", :controller => "products", :action => "destroy"
+  # get "/delete_product/:id", :controller => "products", :action => "destroy"
   #------------------------------
 
   devise_for :users
