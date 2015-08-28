@@ -11,40 +11,34 @@
       <dt>Delivery Type</dt>
       <dd><ul class="list-group">
        <li class="list-group-item">
-       <%= @product.delivery.name %>
+         <%= @product.delivery.name %>
+       </li>
+     </ul></dd>
+
+     <dt>Flavors Available</dt>
+     <dd><ul class="list-group">
+      <% @product.marketterms.order("name ASC").each do |marketterm| %>
+      <li class="list-group-item">
+        <%= marketterm.name %>
       </li>
-      </ul></dd>
+      <% end %>
+    </ul></dd>
 
-      <dt>Flavors Available</dt>
-      <dd><ul class="list-group">
-        <% @product.marketterms.order("name ASC").each do |marketterm| %>
-        <li class="list-group-item">
-          <%= marketterm.name %>
-        </li>
-        <% end %>
-      </ul></dd>
+    <dt>Allergens Present</dt>
+    <dd><ul class="list-group">
+      <% @product.allergens.each do |allergen| %>
+      <li class="list-group-item">
+        <%= allergen.name %>
+      </li>
+      <% end %>
+    </ul></dd>
 
-      <dt>Allergens Present</dt>
-      <dd><ul class="list-group">
-        <% @product.allergens.each do |allergen| %>
-        <li class="list-group-item">
-          <%= allergen.name %>
-        </li>
-        <% end %>
-      </ul></dd>
+  </dl>
 
-    </dl>
-
-    <div class="btn-group btn-group-justified">
-      <a href="/products" class="btn btn-primary">
-        Back
-      </a>
-      <a href="/products/<%= @product.id %>/edit" class="btn btn-warning">
-        Edit
-      </a>
-      <a href="/delete_product/<%= @product.id %>" class="btn btn-danger" rel="nofollow">
-        Delete
-      </a>
-    </div>
+  <div class="btn-group btn-group-justified">
+    <a href="/products" class="btn btn-primary">
+      Back
+    </a>
   </div>
+</div>
 </div>

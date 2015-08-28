@@ -1,7 +1,6 @@
 <div class="page-header">
   <h1>
     Search Product by Flavor Type
-<!--     <a href="/flavors/new" class="btn btn-lg btn-success">New Flavor Type</a> -->
   </h1>
 </div>
 
@@ -17,9 +16,7 @@
       <tr>
         <td><%= flavor.name %></td>
         <td>
-          <a href="/flavors/<%= flavor.id %>" class="btn btn-warning">Search</a>
-<!--           <a href="/flavors/<#%= flavor.id %>/edit" class="btn btn-warning">Edit</a>
-          <a href="/delete_flavor/<#%= flavor.id %>" class="btn btn-danger" rel="nofollow">Delete</a> -->
+          <a href="/flavors/<%= flavor.id %>" class="btn btn-warning"><i class="fa fa-search"></i> Search</a>
         </td>
       </tr>
       <% end %>

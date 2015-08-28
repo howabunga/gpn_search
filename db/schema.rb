@@ -73,8 +73,6 @@ ActiveRecord::Schema.define(version: 20150826230525) do
   end
 
   create_table "favorites", force: :cascade do |t|
-    t.integer  "flavor_id"
-    t.integer  "allergen_id"
     t.integer  "product_id"
     t.integer  "user_id"
     t.datetime "created_at"

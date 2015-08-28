@@ -1,7 +1,6 @@
 <div class="page-header">
   <h1>
     Search Product by Delivery Type
-<!--     <a href="/deliveries/new" class="btn btn-lg btn-success">New Delivery</a> -->
   </h1>
 </div>
 
@@ -17,9 +16,7 @@
       <tr>
         <td><%= delivery.name %></td>
         <td>
-          <a href="/deliveries/<%= delivery.id %>" class="btn btn-warning">Search</a>
-<!--           <a href="/deliveries/<#%= delivery.id %>/edit" class="btn btn-warning">Edit</a>
-          <a href="/delete_delivery/<#%= delivery.id %>" class="btn btn-danger" rel="nofollow">Delete</a> -->
+          <a href="/deliveries/<%= delivery.id %>" class="btn btn-warning"><i class="fa fa-search"></i> Search</a>
         </td>
       </tr>
       <% end %>
