@@ -186,6 +186,13 @@ allergeninfo_hashes = [
   { :name => "None", :product_id => "60", :allergen_id => "9" },
   { :name => "None", :product_id => "61", :allergen_id => "9" },
   { :name => "None", :product_id => "62", :allergen_id => "9" },
+  { :name => "Milk", :product_id => "63", :allergen_id => "1" },
+  { :name => "Soy", :product_id => "63", :allergen_id => "2" },
+  { :name => "peanut", :product_id => "63", :allergen_id => "5" },
+  { :name => "Soy", :product_id => "64", :allergen_id => "2" },
+  { :name => "Milk", :product_id => "65", :allergen_id => "1" },
+  { :name => "Soy", :product_id => "65", :allergen_id => "2" },
+
 ]
 
 allergeninfo_hashes.each do |allergeninfo_hash|
@@ -373,9 +380,15 @@ marketterm_hashes = [
   { :name => "Watermelon", :product_id => "61", :flavor_id => "9" },
   { :name => "Blue Raspberry", :product_id => "61", :flavor_id => "12" },
   { :name => "Black Cherry", :product_id => "61", :flavor_id => "13" },
-  { :name => "Green Tea", :product_id => "61", :flavor_id => "17" },
-  { :name => "Lemon Tea", :product_id => "61", :flavor_id => "17" },
-  { :name => "Raspberry Tea", :product_id => "61", :flavor_id => "17" },
+  { :name => "Green Tea", :product_id => "62", :flavor_id => "17" },
+  { :name => "Lemon Tea", :product_id => "62", :flavor_id => "17" },
+  { :name => "Raspberry Tea", :product_id => "62", :flavor_id => "17" },
+  { :name => "Chunky Peanut and Caramel", :product_id => "63", :flavor_id => "14" },
+  { :name => "Alpine Punch", :product_id => "64", :flavor_id => "6" },
+  { :name => "Cranberry Grape", :product_id => "64", :flavor_id => "7" },
+  { :name => "Cherry Lime", :product_id => "64", :flavor_id => "13" },
+  { :name => "Vanilla", :product_id => "65", :flavor_id => "1" },
+  { :name => "Chocolate", :product_id => "65", :flavor_id => "2" },
 
 ]
 
@@ -452,7 +465,11 @@ product_hashes = [
   {:image => "59.png", :name => "Speed Shot", :brand_id => "3", :delivery_id => "2" },
   {:image => "60.png", :name => "Speed Stack", :brand_id => "3", :delivery_id => "2" },
   {:image => "61.png", :name => "Speed Stack Pumped N.O.", :brand_id => "3", :delivery_id => "2" },
-  {:image => "62.png", :name => "Turbo Tea Zero", :brand_id => "3", :delivery_id => "2" }
+  {:image => "62.png", :name => "Turbo Tea Zero", :brand_id => "3", :delivery_id => "2" },
+  {:image => "63.jpg", :name => "Protein Bar", :brand_id => "4", :delivery_id => "6" },
+  {:image => "64.jpg", :name => "Nature's Best Isopure Aminos", :brand_id => "5", :delivery_id => "1" },
+  {:image => "65.jpg", :name => "AnyTime Protein", :brand_id => "6", :delivery_id => "1" },
+
 ]
 
 product_hashes.each do |product_hash|
